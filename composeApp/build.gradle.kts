@@ -39,7 +39,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "countdown"
-            packageVersion = "1.0.1"
+            packageVersion = "1.0.2"
 
             windows {
                 menuGroup = "countdown"
