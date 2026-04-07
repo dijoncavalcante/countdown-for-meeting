@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
@@ -150,8 +151,8 @@ import java.time.temporal.ChronoUnit
 
                 // ── Título ──────────────────────────────────────────────────────
                 Text(
-                    text      = "⏱ A reunião começará em:",
-                    fontSize  = 28.sp,
+                    text      = "A reunião começará em:",
+                    fontSize  = 68.sp,
                     fontWeight = FontWeight.ExtraBold,
                     letterSpacing = 8.sp,
                     color     = TextSecondary
@@ -167,12 +168,6 @@ import java.time.temporal.ChronoUnit
                     if (finished) {
                         // Mensagem de fim
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-//                            Text(
-//                                text      = "🎉",
-//                                fontSize  = 96.sp,
-//                                textAlign = TextAlign.Center
-//                            )
-//                            Spacer(Modifier.height(16.dp))
                             Text(
                                 text       = "Boa reunião!",
                                 fontSize   = 80.sp,
@@ -234,12 +229,12 @@ import java.time.temporal.ChronoUnit
                             ),
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier
-                                .height(56.dp)
-                                .widthIn(min = 160.dp)
+                                .height(120.dp)
+                                .widthIn(min = 300.dp)
                         ) {
                             Text(
                                 text       = if (running) "⏸  Pausar" else "▶  Iniciar",
-                                fontSize   = 20.sp,
+                                fontSize   = 60.sp,
                                 fontWeight = FontWeight.Bold,
                                 letterSpacing = 1.sp
                             )
@@ -256,9 +251,10 @@ import java.time.temporal.ChronoUnit
                                 colors = ButtonDefaults.outlinedButtonColors(
                                     contentColor = TextSecondary
                                 ),
-                                modifier = Modifier.height(56.dp)
+                                modifier = Modifier.height(120.dp)
+                                    .widthIn(min = 300.dp)
                             ) {
-                                Text("↺  Resetar", fontSize = 18.sp)
+                                Text("↺  Resetar", fontSize = 60.sp)
                             }
                         }
                     }
@@ -271,12 +267,12 @@ import java.time.temporal.ChronoUnit
                         ),
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier
-                            .height(56.dp)
-                            .widthIn(min = 140.dp)
+                            .height(120.dp)
+                            .widthIn(min = 300.dp)
                     ) {
                         Text(
                             text       = "✕  Fechar",
-                            fontSize   = 20.sp,
+                            fontSize   = 60.sp,
                             fontWeight = FontWeight.Bold,
                             color      = DangerRed
                         )
@@ -301,7 +297,7 @@ import java.time.temporal.ChronoUnit
         ) {
             Text(
                 text       = value,
-                fontSize   = 140.sp,
+                fontSize   = 360.sp,
                 fontWeight = FontWeight.Black,
                 color      = TextPrimary, //color,
                 letterSpacing = (-4).sp
@@ -313,7 +309,7 @@ import java.time.temporal.ChronoUnit
     private fun Separator(color: Color) {
         Text(
             text       = ":",
-            fontSize   = 120.sp,
+            fontSize   = 250.sp,
             fontWeight = FontWeight.Black,
             color      = TextPrimary, //color.copy(alpha = 0.6f),
             modifier   = Modifier.padding(horizontal = 8.dp)
